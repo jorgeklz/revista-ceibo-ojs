@@ -1,0 +1,53 @@
+services:
+  ojs-db:
+    image: mariadb:10.11
+    container_name: ojs_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: ojs_db
+      MYSQL_USER: ojs_user
+      MYSQL_PASSWORD: ojs_password
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    networks:
+      - ojs-net
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  ojs-app:
+    image: pkpofficial/ojs:3_3_0-8
+    container_name: ojs_app
+    platform: linux/amd64
+    restart: always
+    ports:
+      - "8080:80"
+    volumes:
+      - ojs_files:/var/www/files
+      - ojs_public:/var/www/html/public
+      - ./config.inc.php:/var/www/html/config.inc.php
+      - ./archivos_galeradas/contexts:/var/www/files/contexts
+      - ./custom_patches/StringHelper.php:/var/www/html/plugins/generic/citationStyleLanguage/lib/vendor/seboettg/citeproc-php/src/Util/StringHelper.php:ro
+      - ./custom_patches/Mbstring.php:/var/www/html/plugins/generic/citationStyleLanguage/lib/vendor/symfony/polyfill-mbstring/Mbstring.php:ro
+      - ./custom_locale/es_ES/lib_pkp_admin.po:/var/www/html/lib/pkp/locale/es_ES/admin.po:ro
+      - ./custom_locale/es_ES/app_admin.po:/var/www/html/locale/es_ES/admin.po:ro
+      - ./custom_patches/codespaces.conf:/etc/apache2/conf.d/codespaces.conf:ro
+    depends_on:
+      ojs-db:
+        condition: service_healthy
+    networks:
+      - ojs-net
+
+volumes:
+  db_data:
+  ojs_files:
+  ojs_public:
+
+networks:
+  ojs-net:
+    driver: bridge
