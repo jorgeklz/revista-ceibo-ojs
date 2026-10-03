@@ -11,6 +11,8 @@ Diseñado para las asignaturas y talleres de posgrado en gestión editorial:
 
 ## Despliegue Inmediato en la Nube (GitHub Codespaces)
 
+[![Abrir en GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/jorgeklz/revista-ceibo-ojs)
+
 Puedes levantar y utilizar la revista directamente en tu navegador sin instalar Docker ni programas en tu computadora:
 
 1. Haz clic en el botón verde **Code** (arriba a la derecha en el repositorio).
