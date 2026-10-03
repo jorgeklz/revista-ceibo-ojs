@@ -33,37 +33,23 @@ Todos los usuarios tienen configurada la misma contraseña de acceso:
 
 > **Contraseña universal para todas las cuentas:** `Ceibo2026*`
 
-### Roles Editoriales Principales
+### Cuentas y Roles Editoriales
 
-| Usuario | Nombre Completo | Rol Asignado | Correo Electrónico |
+| Usuario | Nombre Completo | Rol Principal en OJS | Correo Institucional |
 | :--- | :--- | :--- | :--- |
-| `jperez` | Dr. Juan Pérez | **Editor en Jefe / Gestor de Revista** | jperez@utm.edu.ec |
-| `admin` | Administrador General | **Administrador del Sitio (SysAdmin)** | admin@revista-ceibo.utm.edu.ec |
-| `mvaldez` | Dra. María Valdez | Editora de Sección (Ciencias de la Vida) | mvaldez@utm.edu.ec |
-| `cmendoza` | Dr. Carlos Mendoza | Editor de Sección (Educación y Sociedad) | cmendoza@utm.edu.ec |
+| `jperez` | Dr. Juan Pérez | **Director / Editor en Jefe y Gestor** | jperez@utm.edu.ec |
+| `admin` | Administrador OJS | **Administrador del Sitio / Gestor** | jorge.parraga@utm.edu.ec |
+| `smendoza` | Dra. Sofía Mendoza | **Gestora de la Revista** | smendoza@utm.edu.ec |
+| `emorales` | MSc. Elena Morales | **Editora de Sección (Ciencias Agrarias)** | emorales@utm.edu.ec |
+| `ralarcon` | Dr. Roberto Alarcón | **Editor de Sección (Educación y TIC)** | ralarcon@utm.edu.ec |
+| `mgomez` | Dr. Manuel Gómez | **Revisor/a por pares (U. Salamanca)** | mgomez@usal.es |
+| `lrestrepo` | Dra. Laura Restrepo | **Revisora por pares (U. Nacional Col.)** | lrestrepo@unal.edu.co |
+| `revisor_ceibo` | Dr. Fernando Castro | **Revisor/a por pares (U. Buenos Aires)** | revisor.ceibo@utm.edu.ec |
+| `revisor2_ceibo` | Dra. Beatriz Silva | **Revisora por pares (U. São Paulo)** | revisor2.ceibo@utm.edu.ec |
+| `jbarreiro` | Ing. Juan Barreiro | **Autor/a de correspondencia** | jbarreiro@gmail.com |
+| `autor_ceibo` | Ing. María Gómez | **Autor/a postulante** | autor.ceibo@utm.edu.ec |
+| `lector_ceibo` | Lector Ceibo | **Lector/a suscrito** | lector.ceibo@utm.edu.ec |
 
-### Autores para Envíos
-
-| Usuario | Nombre Completo | Especialidad / Rol | Correo Electrónico |
-| :--- | :--- | :--- | :--- |
-| `autor1` | Dr. Luis Morales | Autor (Envíos de Ciencias Agropecuarias) | lmorales@utm.edu.ec |
-| `autor2` | Dra. Elena Zambrano | Autora (Envíos de Educación Superior) | ezambrano@utm.edu.ec |
-| `autor3` | Mgs. Diego Cedeño | Autor (Envíos de Tecnología e Innovación) | dcedeno@utm.edu.ec |
-
-### Revisores para Evaluación por Pares
-
-| Usuario | Nombre Completo | Área de Revisión | Correo Electrónico |
-| :--- | :--- | :--- | :--- |
-| `revisor1` | Dr. Patricia Andrade | Revisora (Evaluación ciega por pares) | pandrade@utm.edu.ec |
-| `revisor2` | Dr. Roberto Bravo | Revisor (Evaluación ciega por pares) | rbravo@utm.edu.ec |
-| `revisor3` | Dra. Gabriela Moreira | Revisora (Evaluación ciega por pares) | gmoreira@utm.edu.ec |
-
-### Equipo de Producción y Maquetación
-
-| Usuario | Nombre Completo | Rol | Correo Electrónico |
-| :--- | :--- | :--- | :--- |
-| `corrector1` | Lic. Sofía Intriago | Corrección de Estilo | sintriago@utm.edu.ec |
-| `maquetador1` | Ing. Kevin Párraga | Maquetador / Diseñador de Galeradas | kparraga@utm.edu.ec |
 
 ---
 
