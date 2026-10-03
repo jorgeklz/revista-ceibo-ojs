@@ -225,9 +225,31 @@ def create_docx(filename):
     body_parts.append(table(headers, users_data, widths))
     body_parts.append(p("", space_after=180))
 
-    # Section 2: Guía de despliegue
-    body_parts.append(p("2. Guía Paso a Paso: Cómo Levantar el Docker desde Cero en otra Computadora", size=26, bold=True, color="1A365D", space_before=240, space_after=120))
-    body_parts.append(p("Este entorno de práctica es totalmente autónomo y compatible con cualquier sistema operativo: macOS (Apple Silicon M1/M2/M3/M4 o Intel), Linux (Ubuntu, Debian, Fedora) y Windows 10/11 con Docker Desktop.", size=21, space_before=40, space_after=140))
+    # Section 2: Despliegue en GitHub Codespaces
+    body_parts.append(p("2. Despliegue en la Nube con GitHub Codespaces (Recomendado)", size=26, bold=True, color="1A365D", space_before=240, space_after=120))
+    body_parts.append(p("Esta es la opción más sencilla y recomendada para estudiantes y docentes, ya que no requiere instalar Docker ni configurar nada en la computadora personal. Todo se ejecuta en los servidores de GitHub y se accede a través del navegador web.", size=21, space_before=40, space_after=140))
+    body_parts.append(callout_box("Beneficio Principal", "Permite que los estudiantes ingresen con cualquier rol editorial (autor, revisor, editor), realicen envíos de artículos y publiquen números completos desde cualquier dispositivo, incluso desde computadoras institucionales o portátiles con recursos limitados."))
+
+    body_parts.append(p("Paso 1: Abrir el Repositorio en GitHub", size=22, bold=True, color="2B6CB0", space_before=140, space_after=60))
+    body_parts.append(p("1. Inicie sesión en su cuenta personal de GitHub (https://github.com).", size=21, space_after=40))
+    body_parts.append(p("2. Ingrese al enlace del repositorio de la revista proporcionado por el docente.", size=21, space_after=120))
+
+    body_parts.append(p("Paso 2: Crear el Entorno Codespace", size=22, bold=True, color="2B6CB0", space_before=140, space_after=60))
+    body_parts.append(p("1. En la parte superior derecha del repositorio, haga clic en el botón verde llamado Code.", size=21, space_after=40))
+    body_parts.append(p("2. Seleccione la pestaña Codespaces en el menú desplegable.", size=21, space_after=40))
+    body_parts.append(p("3. Haga clic en el botón Create codespace on main.", size=21, space_after=120))
+
+    body_parts.append(p("Paso 3: Esperar la Inicialización Automática", size=22, bold=True, color="2B6CB0", space_before=140, space_after=60))
+    body_parts.append(p("GitHub creará una máquina virtual con Linux, descargará las imágenes de OJS y MariaDB, e iniciará la revista de manera 100% automática. Este proceso toma entre 1 y 2 minutos la primera vez.", size=21, space_after=120))
+
+    body_parts.append(p("Paso 4: Abrir la Revista en el Navegador", size=22, bold=True, color="2B6CB0", space_before=140, space_after=60))
+    body_parts.append(p("1. Al completarse el inicio, aparecerá una notificación emergente en la esquina inferior derecha con el botón Open in Browser (Abrir en el navegador).", size=21, space_after=40))
+    body_parts.append(p("2. Al hacer clic, se abrirá una nueva pestaña con la Revista Ceibo en su dirección web segura de GitHub (por ejemplo: https://nombre-codespace-8080.app.github.dev).", size=21, space_after=40))
+    body_parts.append(p("3. Si la ventana emergente no aparece, haga clic en la pestaña Ports en la barra inferior, busque el puerto 8080 y haga clic en el icono del globo terráqueo.", size=21, space_after=140))
+
+    # Section 3: Guía de despliegue local
+    body_parts.append(p("3. Ejecución Local con Docker Desktop en otra Computadora", size=26, bold=True, color="1A365D", space_before=240, space_after=120))
+    body_parts.append(p("Si prefiere trabajar sin conexión a internet o de manera local, este entorno es compatible con cualquier sistema operativo: macOS (Apple Silicon M1/M2/M3/M4 o Intel), Linux (Ubuntu, Debian, Fedora) y Windows 10/11 con Docker Desktop.", size=21, space_before=40, space_after=140))
 
     # Paso 1
     body_parts.append(p("Paso 1: Instalación de Prerrequisitos", size=22, bold=True, color="2B6CB0", space_before=160, space_after=60))
