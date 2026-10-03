@@ -20,8 +20,15 @@ RUN rm -f /usr/sbin/sendmail && \
     touch /var/log/mail.log && \
     chmod 666 /var/log/mail.log
 
-# Ajustar permisos
-RUN chown -R apache:apache /var/www/files /var/www/html/public && \
+# Crear carpetas de almacenamiento para las 8 revistas y ajustar permisos
+RUN for i in 1 2 3 4 5 6 7 8; do \
+      mkdir -p /var/www/files/journals/$i/articles \
+               /var/www/files/journals/$i/issues \
+               /var/www/files/contexts/$i/submissions \
+               /var/www/html/public/journals/$i; \
+    done && \
+    chown -R apache:apache /var/www/files /var/www/html/public && \
     chmod -R 775 /var/www/files /var/www/html/public
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
+
