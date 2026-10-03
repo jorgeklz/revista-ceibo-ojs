@@ -13,6 +13,13 @@ COPY custom_locale/es_ES/app_admin.po /var/www/html/locale/es_ES/admin.po
 # Copiar archivos PDF de articulos publicados
 COPY archivos_galeradas/contexts /var/www/files/contexts
 
+# Configurar simulador de envio de correo para entorno academico y de practica
+RUN rm -f /usr/sbin/sendmail && \
+    printf '#!/bin/sh\ncat >> /var/log/mail.log\nexit 0\n' > /usr/sbin/sendmail && \
+    chmod 755 /usr/sbin/sendmail && \
+    touch /var/log/mail.log && \
+    chmod 666 /var/log/mail.log
+
 # Ajustar permisos
 RUN chown -R apache:apache /var/www/files /var/www/html/public && \
     chmod -R 775 /var/www/files /var/www/html/public
